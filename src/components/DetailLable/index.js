@@ -1,7 +1,5 @@
 import React from 'react';
-// import { routerRedux } from 'dva/router';
-import { Card, Form, Table, Badge, Button, Divider } from 'antd';
-import style from './index.less';
+import { Card, Form,Button, Divider } from 'antd';
 
 /**
  * 标签树的标签详情modal
@@ -39,54 +37,40 @@ class DeatilLabel extends React.Component {
 /**
  * 获取详情接口
  */
-  getlabelDetail = () => {
-    const { dispatch } = this.props;
-    // dispatch({
-    //   type: 'tagManagementModal/getDet',
-    //   payload: {
-    //     id: this.state.id,
-    //   },
-    // });
-  };
+  getlabelDetail = () => {};
  
   cancel = () => {
     this.props.cancel();
   };
   render() {
-    const {
-      tagManagementModal: { listDet },
-      loading,
-    } = this.props;
-    const labelList = listDet || [];
-    console.log('labkle', labelList);
     return (
-      <Card bordered={false} className={style.detailModal} loading={loading}>
-        <div className={style['table-con']}>
-          <table className={style.tabledel} border="1">
+      <Card bordered={false} className='detailModal'>
+        <div className='table-con'>
+          <table className='tabledel' border="1">
             <tr>
               <th>标签名称</th>
               <td colSpan={'4'}>
-                <span type="danger">{labelList.name || '标签名称'}</span>
+                <span type="danger">{'标签名称'}</span>
               </td>
               <th>覆盖量</th>
               <td>
-                <span type="danger">{labelList.coverCount || '覆盖量'}</span>
+                <span type="danger">{'覆盖量'}</span>
               </td>
             </tr>
             <tr>
               <th>标签实例名称</th>
               <td colSpan={"4"}>
-                <span>{labelList.name || '标签实例名称'}</span>
+                <span>{'标签实例名称'}</span>
               </td>
               <th>标签实例编号</th>
               <td>
-                <span>{labelList.code || '标签实例编号'}</span>
+                <span>{'标签实例编号'}</span>
               </td>
             </tr>
             <tr>
               <th>生成规则描述</th>
               <td colSpan={'7'}>
-                <span type="danger">{labelList.ruleDescription || '生成规则描述'}</span>
+                <span type="danger">{'生成规则描述'}</span>
               </td>
             </tr>
             <tr>

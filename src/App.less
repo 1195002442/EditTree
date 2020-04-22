@@ -1,3 +1,38 @@
+@import '~antd/dist/antd.css';
+.isOpera{
+  .operationField {
+    float: right;
+    margin-right: 20px;
+    visibility: hidden;
+  }
+  &:hover {
+    .operationField {
+      visibility: visible;
+    }
+  }
+  .item-deep {
+    border: 1px solid #cdcbcb;
+    border-radius: 12px;
+    padding: 1px 10px;
+  }
+}
+.titleContainer {
+    .operationField {
+      float: right;
+      margin-right: 20px;
+      visibility: hidden;
+    }
+    &:hover {
+      .operationField {
+        visibility: visible;
+      }
+    }
+    .item-deep {
+      border: 1px solid #cdcbcb;
+      border-radius: 12px;
+      padding: 1px 10px;
+    }
+  }
 .treeList {
   background-color: #fff;
   padding: 12px;
@@ -26,24 +61,7 @@
       background-color: rgba(197, 197, 228, 0.212);
     }
   }
-  .isOpera,
-  .titleContainer {
-    .operationField {
-      float: right;
-      margin-right: 20px;
-      visibility: hidden;
-    }
-    &:hover {
-      .operationField {
-        visibility: visible;
-      }
-    }
-    .item-deep {
-      border: 1px solid #cdcbcb;
-      border-radius: 12px;
-      padding: 1px 10px;
-    }
-  }
+  
 }
 
 .site-tree-search-value {

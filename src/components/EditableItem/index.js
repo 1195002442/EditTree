@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
 import { Input, Icon } from 'antd';
-import styles from './index.less';
+import  './index.less';
 
 export default class EditableItem extends PureComponent {
   constructor(props) {
@@ -32,16 +32,16 @@ export default class EditableItem extends PureComponent {
   render() {
     const { value, editable } = this.state;
     return (
-      <div className={styles.editableItem}>
+      <div className='editableItem'>
         {editable ? (
-          <div className={styles.wrapper}>
+          <div className='wrapper'>
             <Input value={value} onChange={this.handleChange} onPressEnter={this.check} />
-            <Icon type="check" className={styles.icon} onClick={this.check} />
+            <Icon type="check" className='icon' onClick={this.check} />
           </div>
         ) : (
-          <div className={styles.wrapper}>
+          <div className='wrapper'>
             <span>{value || ' '}</span>
-            <Icon type="edit" className={styles.icon} onClick={this.edit} />
+            <Icon type="edit" className='icon' onClick={this.edit} />
           </div>
         )}
       </div>

@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
-import { Card, Form, Table, Badge, Button, Divider, Select, Input } from 'antd';
-import style from './index.less';
+import { Card, Form, Button, Divider, Select, Input } from 'antd';
+import './index.less';
 
 const layout = {
   labelCol: { span: 8 },
@@ -42,16 +42,6 @@ class AddlLabel extends React.Component {
     }
   }
 
-  getlabelDetail = () => {
-    const { dispatch } = this.props;
-    dispatch({
-      type: 'tagManagementModal/getDet',
-      payload: {
-        id: this.state.id,
-      },
-    });
-  };
-
   cancel = () => {
     this.props.Cancel();
   };
@@ -65,7 +55,7 @@ class AddlLabel extends React.Component {
       if (err) return;
       const newFieldValue = fieldsValue;
       formValue = newFieldValue;
-      console.log('表单内容', fieldsValue);
+      // console.log('表单内容', fieldsValue);
     });
     this.props.addOk(formValue);
   };
@@ -75,9 +65,9 @@ class AddlLabel extends React.Component {
       form: { getFieldDecorator },
     } = this.props;
     return (
-      <Card bordered={false} className={style.detailModal} loading={loading}>
-        <div className={style['table-con']}>
-          <Form onSubmit={this.handleSearch} {...layout} className={style['search-form-con']}>
+      <Card bordered={false} className='detailModal' loading={loading}>
+        <div className='table-con'>
+          <Form onSubmit={this.handleSearch} {...layout} className='search-form-con'>
             <FormItem label="新建类型">
               {getFieldDecorator('generateType', {
                 rules: [
@@ -123,8 +113,7 @@ class AddlLabel extends React.Component {
             <div style={{ overflow: 'hidden', textAlign: 'right' }}>
               <div>
                 <Button style={{ marginRight: 20 }} onClick={this.cancel}>
-                  {' '}
-                  取消{' '}
+                  取消
                 </Button>
                 <Button type="primary" htmlType="submit">
                   确定
