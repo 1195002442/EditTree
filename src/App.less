@@ -1,0 +1,91 @@
+.treeList {
+  background-color: #fff;
+  padding: 12px;
+  .renderser {
+    border-bottom: 1px solid #eee;
+    margin-bottom: 20px;
+  }
+  .draggable-tree {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
+  .changeSys {
+    margin-right: 20px;
+  }
+
+  .item-label {
+    font-size: 16px;
+  }
+  .icon {
+    font-size: 18px;
+    color: #000;
+    margin-left: 10px;
+  }
+  .titleContainer {
+    &:hover {
+      background-color: rgba(197, 197, 228, 0.212);
+    }
+  }
+  .isOpera,
+  .titleContainer {
+    .operationField {
+      float: right;
+      margin-right: 20px;
+      visibility: hidden;
+    }
+    &:hover {
+      .operationField {
+        visibility: visible;
+      }
+    }
+    .item-deep {
+      border: 1px solid #cdcbcb;
+      border-radius: 12px;
+      padding: 1px 10px;
+    }
+  }
+}
+
+.site-tree-search-value {
+  color: #f50;
+}
+
+:global {
+  .ant-tree li .ant-tree-node-content-wrapper:hover {
+    background-color: unset;
+  }
+}
+.modifyModal {
+  text-align: center;
+  .modifyform {
+    height: 50px;
+    .labeltext {
+      margin-right: 20px;
+    }
+    .required {
+      color: red;
+    }
+    .inputField {
+      // border: none;
+      // border-bottom: 1px solid;
+      background: none;
+      line-height: normal;
+      width: 240px;
+      outline: none;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+}
+.tagItem {
+  margin-right: 15px;
+  padding: 7px 14px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.activeTag {
+  background: #1890ff;
+  color: #fff;
+}
