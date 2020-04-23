@@ -24,7 +24,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### `需求列表`
 
-## `只有一个根目录`
+### `只有一个根目录`
 else if (
       (info.dropToGap && info.dropPosition == -1 && dropKey == '0-1' && dropPosition == -1) ||
       (!info.dropToGap && info.dropPosition == 0 && dropKey == '0-1' && dropPosition == 0)
@@ -38,8 +38,10 @@ else if (
         item.children.unshift(dragObj);
       });
     }
-## `isOpera==true时，可以操作即增删改查和拖拽`
-## `可以新增同级和子集，父级暂未实现`
+### `可以增删改查和拖拽`
+### `可以新增同级和子集，父级暂未实现`
+### `预览`
+https://img-blog.csdnimg.cn/2020042310112634.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzM3MjMzMDIz,size_16,color_FFFFFF,t_70
  循环条件需要进一步优化
 
 
